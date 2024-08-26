@@ -1,0 +1,240 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 4s ease-in-out;
+}
+
+@keyframes rotateAndColor {
+  0% {
+    opacity: 0;
+    transform: rotate(-360deg);
+    color: red;
+  }
+
+  25% {
+    color: orange;
+  }
+
+  50% {
+    color: yellow;
+  }
+
+  75% {
+    color: green;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    color: blue;
+  }
+}
+
+/*   
+  .animate-rotateAndColor {
+    animation: rotateAndColor 2s ease-in-out;
+  } */
+
+/* Define the hover animation */
+@keyframes hoverEffect {
+  0% {
+    color: rgb(225, 32, 29);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    color: red;
+    transform: rotate(15deg);
+  }
+
+  100% {
+    color: rgb(10, 101, 135);
+    transform: rotate(0deg);
+  }
+}
+
+/* Apply the hover animation */
+#nav-link:hover {
+  animation: hoverEffect 0.5s ease-in-out;
+  font-style: italic;
+  transition: color 0.5s ease-in-out;
+  letter-spacing: 1px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.contact-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+
+.contact-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.contact-card-text {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.contact-card-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-card-links a:hover {
+  text-decoration: underline;
+}
+
+/* @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .animate-shake {
+    animation: shake 0.5s infinite;
+  } */
+
+/* styles.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* styles.css */
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.progress-bar {
+  animation: progressFill 2s ease-in-out;
+}
+
+
+
+.custom-list-item {
+  position: relative;
+  padding-left: 30px;
+  /* Space for the tick symbol */
+}
+
+.custom-list-item::before {
+  content: '\2713';
+  /* Unicode for the tick symbol */
+  color: green;
+  /* Tick color */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  /* Adjust the size of the tick symbol */
+}
+
+
+/* MagicCursor.css */
+
+.magic-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.cursor-particle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(79, 197, 248, 0.8) 50%, rgba(22, 24, 28, 0.6) 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  z-index: 9999;
+}
+
+.cursor-particle::before,
+.cursor-particle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  animation: particle-trail 1s infinite ease-out;
+  opacity: 0;
+}
+
+.cursor-particle::before {
+  animation-delay: 0.2s;
+}
+
+.cursor-particle::after {
+  animation-delay: 0.4s;
+}
+
+@keyframes particle-trail {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
