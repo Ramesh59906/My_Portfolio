@@ -14,6 +14,13 @@
   animation: fadeIn 1s ease-in-out;
 }
 
+*{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#hi:hover{
+   width: 400px;
+}
 
 @keyframes slideIn {
   0% {
@@ -237,4 +244,27 @@ html {
     transform: scale(2.5);
     opacity: 0;
   }
+}
+button{
+  background-color: #007bff;
+}
+button:hover{
+  background: linear-gradient(to right, rgb(53, 210, 234), rgb(199, 199, 199));   color: antiquewhite;
+   transition: 1s;
+}
+.card-hover-effect {
+  border: none;
+  background-color: rgb(248, 255, 253); /* Default background color */
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.card-hover-effect:hover {
+  background: linear-gradient(to right, #dddddd, #90fbf7); /* Gradient on hover */
+  color: white; /* Font color changes on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.card-hover-effect:hover .card-title,
+.card-hover-effect:hover .card-text {
+  color: rgb(2, 2, 2); /* Change the text color to white when hovering */
 }
