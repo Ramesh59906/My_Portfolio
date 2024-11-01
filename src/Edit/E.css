@@ -268,3 +268,38 @@ button:hover{
 .card-hover-effect:hover .card-text {
   color: rgb(2, 2, 2); /* Change the text color to white when hovering */
 }
+
+/* Navbar animations */
+.animate-rotateAndColor {
+  animation: rotateColor 2s infinite;
+}
+
+.offcanvas-animation {
+  animation: slideIn 0.3s ease;
+}
+
+/* Define keyframes for animations */
+@keyframes rotateColor {
+  0% {
+    color: #000;
+    transform: rotate(0deg);
+  }
+  50% {
+    color: #17a2b8; /* Bootstrap info color */
+    transform: rotate(0deg);
+  }
+  100% {
+    color: #000;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+

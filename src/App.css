@@ -69,3 +69,12 @@
   font-size: 40px; /* Increase the font size as needed */
   font-weight: bold; /* Make the text bold */
 }
+
+.zoom-effect {
+  transition: transform 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.zoom-effect:hover {
+  transform: scale(1.2); /* Scale the image to 120% on hover */
+}

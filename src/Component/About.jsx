@@ -20,7 +20,7 @@ const About = () => {
         </Col>
       </Row>
       <Row className="animate-fadeIn mb-4 py-2">
-        <Col sm={12} md={6} className="text-center mb-4 mb-md-0" data-aos="zoom-in">
+        <Col sm={12} md={12} xs={12} lg={6} className="text-center mb-4 mb-md-0" data-aos="zoom-in">
           <img
             className="img-fluid"
             style={{maxHeight:"430px",border:"none"}}
@@ -28,7 +28,7 @@ const About = () => {
             alt="Illustration of a Job Interview"
           />
         </Col>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={12} xs={12} lg={6}>
           <Card className="border-0" data-aos="zoom-in">
             <Card.Body className='p-0 mt-1'>
               <Card.Title>

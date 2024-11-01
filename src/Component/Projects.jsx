@@ -42,7 +42,7 @@ const Projects = () => {
             <Container id="projects" className="my-5">
                 <Row>
                     {projectList.map((project, index) => (
-                        <Col md={4} sm={6} xs={12} key={index}>
+                        <Col md={6} sm={6} lg={4} xs={12} key={index}>
                             <Card className="mb-4" data-aos="zoom-in" style={{ minHeight }}>
                                 <Card.Img variant="top"src={project.imgSrc} fluid />
                                 {/* <img src={project.imgSrc} className='image-fluid' alt="" /> */}

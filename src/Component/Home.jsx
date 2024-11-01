@@ -44,7 +44,7 @@ const Home = () => {
                 <a href="https://web.whatsapp.com/" className='text-dark'><i className="bi bi-whatsapp px-1"></i></a>
                 <a href="https://github.com/Ramesh59906/" className='text-dark'><i className="bi bi-github px-1"></i></a>
               </div>
-              <button style={{color:"#48e8e8"}} onClick={() => window.location.href = "mailto:rameshn07101@gmail.com?subject=Job%20Opportunity&body=Hello%2C%20I%20am%20interested%20in%20working%20with%20you.%20Please%20share%20details%20about%20the%20project."} className='border rounded text-white mt-4 px-3 py-1 mx-0 animate-fadeIn'>
+              <button onClick={() => window.location.href = "mailto:rameshn07101@gmail.com?subject=Job%20Opportunity&body=Hello%2C%20I%20am%20interested%20in%20working%20with%20you.%20Please%20share%20details%20about%20the%20project."} className='border bg-info rounded text-white mt-4 px-3 py-1 mx-0 animate-fadeIn'>
                 Hire Me!!
               </button>
               {/* <Button
@@ -53,10 +53,10 @@ const Home = () => {
               >
                 Hire Me!
               </Button> */}
-              <button style={{color:"#48e8e8"}}
+              <button 
                 href={resumePDF}  // Link to the imported PDF file
                 target="_blank"
-                className='border rounded text-white mt-4 px-3 py-1 mx-3 animate-fadeIn'
+                className='border bg-info rounded text-white mt-4 px-3 py-1 mx-3 animate-fadeIn'
               >
                 Resume
               </button>

@@ -24,7 +24,7 @@ const Skill = () => {
         </Col>
       </Row>
       <Row className="animate-fadeIn py-5">
-      <Col md={4} className="mb-4">
+      <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
       <Card data-aos="flip-left" className="coll py-2 card-hover-effect" id="">
         <Card.Body style={{ minHeight: "0px" }}>
           <FaHtml5 size={50} className="mb-3" color="#E34F26" />
@@ -36,7 +36,7 @@ const Skill = () => {
         </Card.Body>
       </Card>
     </Col>
-        <Col md={4} className="mb-4">
+        <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
           <Card data-aos="flip-left"  className='coll py-2 card-hover-effect'>
             <Card.Body style={{ minHeight: "0px" }}>
               {/* <FaJs size={50} className="mb-3" color="#fffff" /> */}
@@ -48,7 +48,7 @@ const Skill = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={4} className="mb-4">
+        <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
           <Card data-aos="flip-right" style={{ border: "none" }} className='py-2 card-hover-effect'>
             <Card.Body style={{ minHeight: "0px" }}>
               <FaReact size={50} className="mb-3" color="#61DAFB" />
@@ -61,7 +61,7 @@ const Skill = () => {
         </Col>
 
 
-        <Col md={4} className="mb-4">
+        <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
           <Card data-aos="zoom-in-up" style={{ border: "none" }} className="py-2 card-hover-effect">
             <Card.Body style={{ minHeight: "0px" }}>
               <FaNodeJs size={50} className="mb-3" color="#68A063" />
@@ -73,7 +73,7 @@ const Skill = () => {
           </Card>
         </Col>
 
-        <Col md={4} className="mb-4">
+        <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
           <Card data-aos="zoom-out-up" style={{ border: "none" }} className="py-2 card-hover-effect">
             <Card.Body style={{ minHeight: "0px" }}>
               <SiMongodb size={50} className="mb-3" color="#47A248" />
@@ -85,7 +85,7 @@ const Skill = () => {
           </Card>
         </Col>
 
-        <Col md={4} className="mb-4">
+        <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
           <Card data-aos="flip-right" style={{ border: "none" }} className="py-2 card-hover-effect">
             <Card.Body style={{ minHeight: "0px" }}>
               <SiMysql size={50} className="mb-3" color="#00758F" />
