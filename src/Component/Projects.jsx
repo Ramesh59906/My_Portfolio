@@ -7,9 +7,9 @@ import "aos/dist/aos.css";
 
 const Projects = () => {
     const projectList = [
-        { title: 'Portfolio Website', description: 'A personal portfolio website to showcase my skills, projects, and experience. Built with React.js, Bootstrap, and Sass.', imgSrc: img, Url: "https://www.johndoe.dev" },
-        { title: 'E-commerce Platform', description: 'A responsive e-commerce platform with product listings, shopping cart, and payment gateway integration. Built using Angular and Bootstrap.', imgSrc: img1, Url: "https://github.com/johndoe/ecommerce-platform" },
-        { title: 'Real-Time Chat Application', description: 'A real-time chat application with private and group chat functionalities. Developed using Vue.js, Socket.io, and Node.js.', imgSrc: img, Url: "https://github.com/johndoe/chat-app" }
+        { title: 'Portfolio Website', description: 'A personal portfolio website to showcase my skills, projects, and experience. Built with React.js, Bootstrap, and Sass.', imgSrc: img, Url: "https://my-portfolio-1yar.vercel.app/" },
+        { title: 'E-commerce Platform', description: 'A responsive e-commerce platform with product listings, shopping cart, and payment gateway integration. Built using Angular and Bootstrap.', imgSrc: img1, Url: "https://github.com/Ramesh59906/" },
+        { title: 'Real-Time Chat Application', description: 'A real-time chat application with private and group chat functionalities. Developed using Vue.js, Socket.io, and Node.js.', imgSrc: img, Url: "https://github.com/Ramesh59906/" }
         // Add more projects here
     ];
 

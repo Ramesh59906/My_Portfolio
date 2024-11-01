@@ -246,7 +246,7 @@ html {
   }
 }
 button{
-  background-color: #007bff;
+  background-color:rgb(0 192 192);
 }
 button:hover{
   background: linear-gradient(to right, rgb(53, 210, 234), rgb(199, 199, 199));   color: antiquewhite;
