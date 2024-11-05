@@ -16,14 +16,14 @@ const Skill = () => {
   }, []);
 
   return (
-    <Container className='py-2'>
+    <Container className="my-5">
       <Row className="animate-fadeIn">
         <Col>
-          <h3>Skills</h3>
-          <hr />
+          <h3 className='text-center animate-rotateAndColor'>Skills</h3>
+          {/* <hr /> */}
         </Col>
       </Row>
-      <Row className="animate-fadeIn py-5">
+      <Row className="animate-fadeIn my-5">
       <Col md={6} lg={4} sm={12} xs={12} className="mb-4">
       <Card data-aos="flip-left" className="coll py-2 card-hover-effect" id="">
         <Card.Body style={{ minHeight: "0px" }}>

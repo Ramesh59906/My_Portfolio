@@ -20,31 +20,34 @@ const Projects = () => {
     const [minHeight, setMinHeight] = useState("400px");
 
     useEffect(() => {
-      const updateHeight = () => {
-        if (window.innerWidth <= 576) {
-          setMinHeight("300px"); // For small devices
-        } else if (window.innerWidth <= 768) {
-          setMinHeight("400px"); // For medium devices
-        } else {
-          setMinHeight("450px"); // For large devices and above
-        }
-      };
-  
-      window.addEventListener('resize', updateHeight);
-      updateHeight(); // Call the function initially
-  
-      return () => window.removeEventListener('resize', updateHeight);
+        const updateHeight = () => {
+            if (window.innerWidth <= 576) {
+                setMinHeight("300px"); // For small devices
+            } else if (window.innerWidth <= 768) {
+                setMinHeight("400px"); // For medium devices
+            } else {
+                setMinHeight("450px"); // For large devices and above
+            }
+        };
+
+        window.addEventListener('resize', updateHeight);
+        updateHeight(); // Call the function initially
+
+        return () => window.removeEventListener('resize', updateHeight);
     }, []);
     return (
-        <div>
-            <h2 className="text-center">Projects</h2>
-            <hr />
-            <Container id="projects" className="my-5">
+            <Container id="projects" className='my-5'>
+                <Row className="animate-fadeIn">
+                    <Col>
+                        <h3 className='text-center animate-rotateAndColor' >Projects</h3>
+                        {/* <hr /> */}
+                    </Col>
+                </Row>
                 <Row>
                     {projectList.map((project, index) => (
-                        <Col md={6} sm={6} lg={4} xs={12} key={index}>
+                        <Col md={6} sm={6} lg={4} xs={12} key={index} className="my-5">
                             <Card className="mb-4" data-aos="zoom-in" style={{ minHeight }}>
-                                <Card.Img variant="top"src={project.imgSrc} fluid />
+                                <Card.Img variant="top" src={project.imgSrc} fluid />
                                 {/* <img src={project.imgSrc} className='image-fluid' alt="" /> */}
                                 <Card.Body>
                                     <Card.Title>{project.title}</Card.Title>
@@ -60,7 +63,6 @@ const Projects = () => {
                     ))}
                 </Row>
             </Container>
-        </div>
     );
 };
 

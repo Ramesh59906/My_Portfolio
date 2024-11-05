@@ -37,7 +37,7 @@ const Services = () => {
   return (
     <div className="py-5 bg-lightblue">
       <Container>
-        <h2 className="text-center mb-5 animate-fadeIn">My Services</h2>
+        <h2 className="text-center mb-5 animate-fadeIn animate-rotateAndColor">My Services</h2>
         <Row className="g-4">
           {services.map((service, index) => (
             <Col md={6} sm={6} lg={4} key={index} className="animate-fadeIn">

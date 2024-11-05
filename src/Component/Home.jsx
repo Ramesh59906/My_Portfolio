@@ -6,7 +6,7 @@ import "../Edit/E.css";
 
 
 // Import the PDF file
-import resumePDF from '../assets/RAMESH N B_TECH(IT)_Chennai (4).pdf'; // Adjust the path according to where you placed the PDF
+import resumePDF from '../assets/Ramesh__pdf.pdf'; // Adjust the path according to where you placed the PDF
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import HireMeModal from './HireMeModal';
@@ -49,7 +49,7 @@ const Home = () => {
               </button> */}
               <a
                 href={resumePDF} // Link to the imported PDF file
-                download="Ramesh_CV.pdf" // Specify the file name for download
+                download="Ramesh__pdf.pdf" // Specify the file name for download
                 className="btn btn-info text-white mt-3 px-3 py-1" // Bootstrap button classes
                 style={{
                   borderRadius: "4px",

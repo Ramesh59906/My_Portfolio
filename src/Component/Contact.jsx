@@ -109,10 +109,14 @@ const Contact = () => {
   return (
     <div className="container-fluid">
       <Container id="contact" className="my-5">
-        <h2 className="animate-fadeIn">Contact</h2>
-        <hr />
+      <Row className="animate-fadeIn">
+        <Col>
+        <h2 className="animate-fadeIn text-center animate-rotateAndColor py-md-4 my-sm-3">Contact</h2>
+        </Col>
+      </Row>
+    
         <Row className='animate-fadeIn contact-card'>
-          <Col md={6} className="mb-4">
+          <Col md={6} className="mb-4 my-3">
             <Card className="contact-card mt-3" style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)" }} data-aos="fade-up">
               <Card.Body>
                 <Card.Title className="contact-card-title">Get in Touch</Card.Title>
