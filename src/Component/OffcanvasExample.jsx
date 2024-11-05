@@ -16,110 +16,135 @@ import Services from './services';
 import "../Edit/E.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faConciergeBell, faUser, faProjectDiagram, faCogs, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { CgMenuLeftAlt } from "react-icons/cg";
 
 function OffcanvasExample() {
   const [activeLink, setActiveLink] = useState('#home');
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
+  const handleToggle = () => {
+    setShowOffcanvas(!showOffcanvas);
+  };
+
+  const handleClose = () => setShowOffcanvas(false);
   const handleSetActive = (link) => {
     setActiveLink(link);
   };
   return (
     <>
       <Navbar expand="lg" style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)", padding: "7px", position: "sticky", top: "0px", zIndex: "1" }}>
-        <Container>
-          <Navbar.Brand href="#home" className='fs-2 animate-rotateAndColor'>P<span className='text-info fs-1'>o</span>rtFolio</Navbar.Brand>
-          <Navbar.Toggle
-            className='border-0' // Remove border
-            aria-controls="offcanvasNavbar"
+      <Container>
+      <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor">
+        P<span className="text-info fs-1">o</span>rtFolio
+      </Navbar.Brand>
+
+      {/* Custom Toggle Icon only visible on small screens */}
+      <div
+        className="d-sm-none"
+        onClick={handleToggle}
+        style={{ cursor: "pointer" }}
+      >
+        <CgMenuLeftAlt size={30} className="text-dark" />
+      </div>
+
+      <Navbar.Offcanvas
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+        placement="end"
+        show={showOffcanvas}
+        onHide={handleClose}
+        className="offcanvas-animation"
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title id="offcanvasNavbarLabel">
+            <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor">
+              P<span className="text-info fs-1">o</span>rtFolio
+            </Navbar.Brand>
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+
+        <div className="d-flex justify-content-center d-md-none">
+          <img
+            width={170}
+            style={{ mixBlendMode: "darken", borderRadius: "110px" }}
+            className="p-0 mt--5 zoom-effect"
+            src="https://img.freepik.com/premium-photo/highquality-linkedin-icon-social-media-logo-business-networking-vector-png-download_1155708-27613.jpg?semt=ais_hybrid"
+            alt="Zoomable Image"
           />
-          <Navbar.Offcanvas
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            placement="end"
-            className="offcanvas-animation" // Custom class for animation
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel">          <Navbar.Brand href="#home" className='fs-2 animate-rotateAndColor'>P<span className='text-info fs-1'>o</span>rtFolio</Navbar.Brand>
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <div className='d-flex justify-content-center d-md-none'>
-              <img width={170} style={{mixBlendMode:"darken",borderRadius:"110px"}} className='p-0 mt--5 zoom-effect' src="https://img.freepik.com/premium-photo/highquality-linkedin-icon-social-media-logo-business-networking-vector-png-download_1155708-27613.jpg?semt=ais_hybrid" alt="Zoomable Image" />
+        </div>
 
-            </div>
-            <Offcanvas.Body>
-              <Nav className="justify-content-center flex-grow-1 pe-3">
-              <Nav.Link
-        href="#home"
-        className={`px-4 ${activeLink === '#home' ? 'active-link' : ''}`}
-        style={{ color: activeLink === '#home' ? 'teal' : 'lightseagreen' }}
-        onClick={() => handleSetActive('#home')}
-      >
-        <FontAwesomeIcon icon={faHome} className="me-2" /> Home
-      </Nav.Link>
-      
-      <Nav.Link
-        href="#services"
-        className={`px-4 ${activeLink === '#services' ? 'active-link' : ''}`}
-        style={{ color: activeLink === '#services' ? 'teal' : 'lightseagreen' }}
-        onClick={() => handleSetActive('#services')}
-      >
-        <FontAwesomeIcon icon={faConciergeBell} className="me-2" /> Services
-      </Nav.Link>
-
-      <Nav.Link
-        href="#about"
-        className={`px-4 ${activeLink === '#about' ? 'active-link' : ''}`}
-        style={{ color: activeLink === '#about' ? 'teal' : 'lightseagreen' }}
-        onClick={() => handleSetActive('#about')}
-      >
-        <FontAwesomeIcon icon={faUser} className="me-2" /> About
-      </Nav.Link>
-      
-      <Nav.Link
-        href="#project"
-        className={`px-4 ${activeLink === '#project' ? 'active-link' : ''}`}
-        style={{ color: activeLink === '#project' ? 'teal' : 'lightseagreen' }}
-        onClick={() => handleSetActive('#project')}
-      >
-        <FontAwesomeIcon icon={faProjectDiagram} className="me-2" /> Project
-      </Nav.Link>
-
-      <Nav.Link
-        href="#skill"
-        className={`px-4 ${activeLink === '#skill' ? 'active-link' : ''}`}
-        style={{ color: activeLink === '#skill' ? 'teal' : 'lightseagreen' }}
-        onClick={() => handleSetActive('#skill')}
-      >
-        <FontAwesomeIcon icon={faCogs} className="me-2" /> Skill
-      </Nav.Link>
-      
-      <Nav.Link
-        href="#contact"
-        className={`px-4 ${activeLink === '#contact' ? 'active-link' : ''}`}
-        style={{ color: activeLink === '#contact' ? 'teal' : 'lightseagreen' }}
-        onClick={() => handleSetActive('#contact')}
-      >
-        <FontAwesomeIcon icon={faEnvelope} className="me-2" /> Contact
-      </Nav.Link>
-                {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-                </NavDropdown> */}
-              </Nav>
-              {/* <Form className="d-flex mt-3 mt-lg-0">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form> */}
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
+        <Offcanvas.Body>
+          <Nav className="justify-content-center flex-grow-1 pe-3">
+            <Nav.Link
+              href="#home"
+              className={`px-4 ${activeLink === '#home' ? 'active-link' : ''}`}
+              style={{ color: activeLink === '#home' ? 'teal' : 'lightseagreen' }}
+              onClick={() => {
+                handleSetActive('#home');
+                handleClose();
+              }}
+            >
+              <FontAwesomeIcon icon={faHome} className="me-2" /> Home
+            </Nav.Link>
+            <Nav.Link
+              href="#services"
+              className={`px-4 ${activeLink === '#services' ? 'active-link' : ''}`}
+              style={{ color: activeLink === '#services' ? 'teal' : 'lightseagreen' }}
+              onClick={() => {
+                handleSetActive('#services');
+                handleClose();
+              }}
+            >
+              <FontAwesomeIcon icon={faConciergeBell} className="me-2" /> Services
+            </Nav.Link>
+            <Nav.Link
+              href="#about"
+              className={`px-4 ${activeLink === '#about' ? 'active-link' : ''}`}
+              style={{ color: activeLink === '#about' ? 'teal' : 'lightseagreen' }}
+              onClick={() => {
+                handleSetActive('#about');
+                handleClose();
+              }}
+            >
+              <FontAwesomeIcon icon={faUser} className="me-2" /> About
+            </Nav.Link>
+            <Nav.Link
+              href="#project"
+              className={`px-4 ${activeLink === '#project' ? 'active-link' : ''}`}
+              style={{ color: activeLink === '#project' ? 'teal' : 'lightseagreen' }}
+              onClick={() => {
+                handleSetActive('#project');
+                handleClose();
+              }}
+            >
+              <FontAwesomeIcon icon={faProjectDiagram} className="me-2" /> Project
+            </Nav.Link>
+            <Nav.Link
+              href="#skill"
+              className={`px-4 ${activeLink === '#skill' ? 'active-link' : ''}`}
+              style={{ color: activeLink === '#skill' ? 'teal' : 'lightseagreen' }}
+              onClick={() => {
+                handleSetActive('#skill');
+                handleClose();
+              }}
+            >
+              <FontAwesomeIcon icon={faCogs} className="me-2" /> Skill
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className={`px-4 ${activeLink === '#contact' ? 'active-link' : ''}`}
+              style={{ color: activeLink === '#contact' ? 'teal' : 'lightseagreen' }}
+              onClick={() => {
+                handleSetActive('#contact');
+                handleClose();
+              }}
+            >
+              <FontAwesomeIcon icon={faEnvelope} className="me-2" /> Contact
+            </Nav.Link>
+          </Nav>
+        </Offcanvas.Body>
+      </Navbar.Offcanvas>
+    </Container>
       </Navbar>
 
       <section id="home" className="section" style={{ padding: "0px 0" }}>
