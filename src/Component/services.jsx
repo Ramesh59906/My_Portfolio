@@ -41,7 +41,7 @@ const Services = () => {
         <Row className="g-4">
           {services.map((service, index) => (
             <Col md={6} sm={6} lg={4} key={index} className="animate-fadeIn">
-              <Card className="h-100 shadow-sm" style={{background: "linear-gradient(to right, #ffffff, #b2d1ff)",border:"none"}} data-aos="zoom-in">
+              <Card className="h-100 shadow-sm" style={{background: "linear-gradient(to right, #ffffff, rgb(170 241 255))",border:"none"}} data-aos="zoom-in">
                 <Card.Body className="text-center">
                   <i className={`${service.icon} text-info mb-3`} style={{ fontSize: "3rem" }}></i>
                   <Card.Title>{service.title}</Card.Title>

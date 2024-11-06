@@ -47,7 +47,7 @@ const Projects = () => {
                 <Row>
                     {projectList.map((project, index) => (
                         <Col md={6} sm={6} lg={4} xs={12} key={index} className="my-5">
-                            <Card className="mb-4" data-aos="zoom-in" style={{ minHeight }}>
+                            <Card className="mb-4 shadow" data-aos="zoom-in" style={{ minHeight,border:"none" }}>
                                 <Card.Img variant="top" src={project.imgSrc} fluid />
                                 {/* <img src={project.imgSrc} className='image-fluid' alt="" /> */}
                                 <Card.Body>

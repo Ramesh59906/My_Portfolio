@@ -54,7 +54,7 @@ function OffcanvasExample() {
   };
   return (
     <>
-      <Navbar expand="lg" style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)", padding: "3px", position: "sticky", top: "0px", zIndex: "1" }}>
+      <Navbar expand="lg" style={{ background: "linear-gradient(to right, #ffffff, rgb(197 245 255)", padding: "3px", position: "sticky", top: "0px", zIndex: "1" }}>
         <Container>
           <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor">
             P<span className="text-info fs-1">o</span>rtFolio
@@ -94,7 +94,7 @@ function OffcanvasExample() {
             src={profile}
             alt="Zoomable Image"
           /> */}
-              <i class="bi bi-person-circle" style={{ fontSize: "120px", color: "teal" }}></i>
+              <i class="bi bi-person-circle" style={{ fontSize: "120px", color: "#6f6f6f" }}></i>
             </div>
 
             <Offcanvas.Body>
@@ -102,7 +102,7 @@ function OffcanvasExample() {
                 <Nav.Link
                   href="#home"
                   className={`px-md-4 px-sm-2 ${activeLink === '#home' ? 'active-link' : ''}`}
-                  style={{ color: activeLink === '#home' ? 'teal' : 'lightseagreen' }}
+                  style={{ color: activeLink === '#home' ? 'teal' : '#6f6f6f' }}
                   onClick={() => {
                     handleSetActive('#home');
                     handleClose();
@@ -114,7 +114,7 @@ function OffcanvasExample() {
                 <Nav.Link
                   href="#services"
                   className={`px-md-4 px-sm-2 ${activeLink === '#services' ? 'active-link' : ''}`}
-                  style={{ color: activeLink === '#services' ? 'teal' : 'lightseagreen' }}
+                  style={{ color: activeLink === '#services' ? 'teal' : '#6f6f6f' }}
                   onClick={() => {
                     handleSetActive('#services');
                     handleClose();
@@ -127,7 +127,7 @@ function OffcanvasExample() {
                 <Nav.Link
                   href="#about"
                   className={`px-md-4 px-sm-2 ${activeLink === '#about' ? 'active-link' : ''}`}
-                  style={{ color: activeLink === '#about' ? 'teal' : 'lightseagreen' }}
+                  style={{ color: activeLink === '#about' ? 'teal' : '#6f6f6f' }}
                   onClick={() => {
                     handleSetActive('#about');
                     handleClose();
@@ -139,7 +139,7 @@ function OffcanvasExample() {
                 <Nav.Link
                   href="#project"
                   className={`px-md-4 px-sm-2 ${activeLink === '#project' ? 'active-link' : ''}`}
-                  style={{ color: activeLink === '#project' ? 'teal' : 'lightseagreen' }}
+                  style={{ color: activeLink === '#project' ? 'teal' : '#6f6f6f' }}
                   onClick={() => {
                     handleSetActive('#project');
                     handleClose();
@@ -151,7 +151,7 @@ function OffcanvasExample() {
                 <Nav.Link
                   href="#skill"
                   className={`px-md-4 px-sm-2${activeLink === '#skill' ? 'active-link' : ''}`}
-                  style={{ color: activeLink === '#skill' ? 'teal' : 'lightseagreen' }}
+                  style={{ color: activeLink === '#skill' ? 'teal' : '#6f6f6f' }}
                   onClick={() => {
                     handleSetActive('#skill');
                     handleClose();
@@ -163,7 +163,7 @@ function OffcanvasExample() {
                 <Nav.Link
                   href="#contact"
                   className={`px-md-4 px-sm-2${activeLink === '#contact' ? 'active-link' : ''}`}
-                  style={{ color: activeLink === '#contact' ? 'teal' : 'lightseagreen' }}
+                  style={{ color: activeLink === '#contact' ? 'teal' : '#6f6f6f' }}
                   onClick={() => {
                     handleSetActive('#contact');
                     handleClose();
@@ -222,8 +222,8 @@ function OffcanvasExample() {
         </Container>
       </section>
 
-      <section id="contact" style={{ padding: "0", backgroundColor: "lightblue" }}>
-        <Container style={{ backgroundColor: "lightblue", padding: "50px 0", justifyContent: "center", display: "flex" }}>
+      <section id="contact" style={{ padding: "0", backgroundColor: "rgb(170 241 255)" }}>
+        <Container style={{ backgroundColor: "rgb(170 241 255)", padding: "50px 0", justifyContent: "center", display: "flex" }}>
           <div className='text-center'>
             <h1>Portfolio</h1>
             <hr />
@@ -260,7 +260,7 @@ function OffcanvasExample() {
               <Nav.Link href="#skill" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>Skill</Nav.Link>
               <Nav.Link href="#contact" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>Contact</Nav.Link>
             </div>
-            <p className='mt-2 d-flex justify-content-center align-items-center'><i style={{fontSize:"14px"}} className="bi bi-c-circle text-info shadow bg-white shadow px-1 rounded-circle"></i>opyright.com</p>
+            <p className='mt-2 d-flex justify-content-center align-items-center'><i style={{fontSize:"14px"}} className="bi bi-c-circle text-info  bg-white  px-1 rounded-circle"></i>opyright.com</p>
           </div>
         </Container>
       </section>

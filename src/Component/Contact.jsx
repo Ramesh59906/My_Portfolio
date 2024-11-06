@@ -117,7 +117,7 @@ const Contact = () => {
     
         <Row className='animate-fadeIn contact-card'>
           <Col md={6} className="mb-4 my-3">
-            <Card className="contact-card mt-3" style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)" }} data-aos="fade-up">
+            <Card className="contact-card mt-3" style={{ background: "linear-gradient(to right, #ffffff, rgb(170 241 255))" }} data-aos="fade-up">
               <Card.Body>
                 <Card.Title className="contact-card-title">Get in Touch</Card.Title>
                 <Card.Text className="contact-card-text">
@@ -137,7 +137,7 @@ const Contact = () => {
             </Card>
           </Col>
           <Col md={6} className="mb-4">
-            <Form onSubmit={handleSubmit} className='mt-3 p-2 border rounded' style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)" }} data-aos="fade-up">
+            <Form onSubmit={handleSubmit} className='mt-3 p-2 border rounded' style={{ background: "linear-gradient(to right, #ffffff, rgb(170 241 255))" }} data-aos="fade-up">
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
@@ -160,7 +160,7 @@ const Contact = () => {
                   required
                 />
               </Form.Group>
-              <Button variant="primary" className='my-2' type="submit">Submit</Button>
+              <Button className='my-2 bg-info border shadow' type="submit">Submit</Button>
             </Form>
           </Col>
         </Row>
