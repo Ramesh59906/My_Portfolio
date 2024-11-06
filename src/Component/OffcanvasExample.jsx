@@ -54,7 +54,7 @@ function OffcanvasExample() {
   };
   return (
     <>
-      <Navbar expand="lg" style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)", padding: "7px", position: "sticky", top: "0px", zIndex: "1" }}>
+      <Navbar expand="lg" style={{ background: "linear-gradient(to right, #ffffff, #b2d1ff)", padding: "3px", position: "sticky", top: "0px", zIndex: "1" }}>
         <Container>
           <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor">
             P<span className="text-info fs-1">o</span>rtFolio
@@ -227,20 +227,40 @@ function OffcanvasExample() {
           <div className='text-center'>
             <h1>Portfolio</h1>
             <hr />
-            <div className="d-flex justify-content-center mb-3">
-              <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className='text-dark'> <i className="bi bi-linkedin px-1"></i></a>
-              <a href="https://www.instagram.com/x_jezz_07/" className='text-dark'><i className="bi bi-instagram px-1"></i></a>
-              <a href="https://web.whatsapp.com/" className='text-dark'><i className="bi bi-whatsapp px-1"></i></a>
-              <a href="https://github.com/Ramesh59906/" className='text-dark'><i className="bi bi-github px-1"></i></a>
+            <div className="d-flex justify-content-center mb-0">
+              <ul className="list-unstyled d-flex gap-3">
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className="text-info">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                </li>
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://www.instagram.com/x_jezz_07/" className="text-info">
+                    <i className="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://web.whatsapp.com/" className="text-info">
+                    <i className="bi bi-whatsapp"></i>
+                  </a>
+                </li>
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://github.com/Ramesh59906/" className="text-info">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+
+
             <div className="d-flex justify-content-center mb-3 flex-wrap">
-              <Nav.Link href="#home" className='px-2' style={{ fontWeight: "bold" }} id='nav-link'>Home</Nav.Link>
-              <Nav.Link href="#about" className='px-2' style={{ fontWeight: "bold" }} id='nav-link'>About</Nav.Link>
-              <Nav.Link href="#project" className='px-2' style={{ fontWeight: "bold" }} id='nav-link'>Project</Nav.Link>
-              <Nav.Link href="#skill" className='px-2' style={{ fontWeight: "bold" }} id='nav-link'>Skill</Nav.Link>
-              <Nav.Link href="#contact" className='px-2' style={{ fontWeight: "bold" }} id='nav-link'>Contact</Nav.Link>
+              <Nav.Link href="#home" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>Home</Nav.Link>
+              <Nav.Link href="#about" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>About</Nav.Link>
+              <Nav.Link href="#project" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>Project</Nav.Link>
+              <Nav.Link href="#skill" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>Skill</Nav.Link>
+              <Nav.Link href="#contact" className='px-3 text-muted' style={{ fontWeight: "500" }} id='nav-link'>Contact</Nav.Link>
             </div>
-            <p className='mt-2'><i className="bi bi-c-circle"></i>opyright.com</p>
+            <p className='mt-2 d-flex justify-content-center align-items-center'><i style={{fontSize:"14px"}} className="bi bi-c-circle text-info shadow bg-white shadow px-1 rounded-circle"></i>opyright.com</p>
           </div>
         </Container>
       </section>

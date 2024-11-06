@@ -38,11 +38,31 @@ const Home = () => {
                 />
               </div>
               <h4 className='animate-fadeIn text-info' style={{ fontWeight: "900", fontSize: "27px" }}>Front-End Developer & Designer...</h4>
-              <div className='my-3 animate-rotateWave'>
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className='text-dark'> <i className="bi bi-linkedin px-1"></i></a>
-                <a href="https://www.instagram.com/x_jezz_07/" className='text-dark'><i className="bi bi-instagram px-1"></i></a>
-                <a href="https://web.whatsapp.com/" className='text-dark'><i className="bi bi-whatsapp px-1"></i></a>
-                <a href="https://github.com/Ramesh59906/" className='text-dark'><i className="bi bi-github px-1"></i></a>
+              <div className='mt-4 animate-rotateWave'>
+              <div className="d-flex justify-content-start mb-0">
+              <ul className="list-unstyled d-flex gap-3">
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className="text-info">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                </li>
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://www.instagram.com/x_jezz_07/" className="text-info">
+                    <i className="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://web.whatsapp.com/" className="text-info">
+                    <i className="bi bi-whatsapp"></i>
+                  </a>
+                </li>
+                <li className="social-icon bg-white rounded-circle shadow d-flex justify-content-center align-items-center">
+                  <a href="https://github.com/Ramesh59906/" className="text-info">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
               </div>
               {/* <button onClick={() => window.location.href = "mailto:rameshn07101@gmail.com?subject=Job%20Opportunity&body=Hello%2C%20I%20am%20interested%20in%20working%20with%20you.%20Please%20share%20details%20about%20the%20project."} className='border bg-info rounded text-white mt-3 px-3 py-1 mx-0 animate-fadeIn'>
                 Hire Me!!
@@ -50,7 +70,7 @@ const Home = () => {
               <a
                 href={resumePDF} // Link to the imported PDF file
                 download="Ramesh__pdf.pdf" // Specify the file name for download
-                className="btn btn-info text-white mt-3 px-3 py-1" // Bootstrap button classes
+                className="btn btn-info text-white shadow mt-3 px-3 py-1" // Bootstrap button classes
                 style={{
                   borderRadius: "4px",
                   display: "inline-block",

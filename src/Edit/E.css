@@ -15,7 +15,10 @@
 }
 
 *{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:"Google Sans", arial, sans-serif;
+}
+body{
+  font-size: 14px;
 }
 
 #hi:hover{
@@ -303,3 +306,21 @@ button:hover{
   }
 }
 
+.social-icon {
+  width: 35px;
+  height:35px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon */
+  background-color: #ffffff; /* Changes background color on hover */
+}
+
+.social-icon a {
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover a {
+  color: #007bff; /* Changes the icon color on hover */
+}

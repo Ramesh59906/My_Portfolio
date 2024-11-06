@@ -19,11 +19,11 @@ const About = () => {
           {/* <hr /> */}
         </Col>
       </Row>
-      <Row className="animate-fadeIn mb-4 py-2">
+      <Row className="animate-fadeIn d-flex justify-content-center align-items-center mb-4 py-2">
         <Col sm={12} md={12} xs={12} lg={6} className="text-center mb-4 my-5 mb-md-0" data-aos="zoom-in">
           <img
             className="img-fluid"
-            style={{maxHeight:"430px",border:"none"}}
+            style={{maxHeight:"500px",border:"none"}}
             src={img}
             alt="Illustration of a Job Interview"
           />

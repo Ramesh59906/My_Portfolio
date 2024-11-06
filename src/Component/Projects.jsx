@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import img from "../../src/assets/86.png";
+import img3 from "../../src/assets/TASK_MANAGEMENT.png";
 import img1 from "../../src/assets/e-commerce-website-building-guide.png";
 import Aos from 'aos';
 import "aos/dist/aos.css";
@@ -9,7 +10,7 @@ const Projects = () => {
     const projectList = [
         { title: 'Portfolio Website', description: 'A personal portfolio website to showcase my skills, projects, and experience. Built with React.js, Bootstrap, and Sass.', imgSrc: img, Url: "https://my-portfolio-1yar.vercel.app/" },
         { title: 'E-commerce Platform', description: 'A responsive e-commerce platform with product listings, shopping cart, and payment gateway integration. Built using Angular and Bootstrap.', imgSrc: img1, Url: "https://github.com/Ramesh59906/" },
-        { title: 'Real-Time Chat Application', description: 'A real-time chat application with private and group chat functionalities. Developed using Vue.js, Socket.io, and Node.js.', imgSrc: img, Url: "https://github.com/Ramesh59906/" }
+        { title: 'Real-Time Chat Application', description: 'A real-time chat application with private and group chat functionalities. Developed using Vue.js, Socket.io, and Node.js.', imgSrc: img3, Url: "https://github.com/Ramesh59906/" }
         // Add more projects here
     ];
 
@@ -24,9 +25,9 @@ const Projects = () => {
             if (window.innerWidth <= 576) {
                 setMinHeight("300px"); // For small devices
             } else if (window.innerWidth <= 768) {
-                setMinHeight("400px"); // For medium devices
+                setMinHeight("380px"); // For medium devices
             } else {
-                setMinHeight("450px"); // For large devices and above
+                setMinHeight("410px"); // For large devices and above
             }
         };
 
