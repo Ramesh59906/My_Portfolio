@@ -35,7 +35,7 @@ const Services = () => {
     Aos.init({duration:2000});
   },[]);
   return (
-    <div className="py-5" style={{ background: "#f7f9fc" }}>
+    <div className="py-5" style={{ background: "" }}>
     <Container fluid>
       {/* Section Heading */}
       <h2 
