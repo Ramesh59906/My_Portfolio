@@ -66,13 +66,13 @@ const Contact = () => {
       </Col>
     </Row>
   
-    <Row className="animate-fadeIn contact-card">
+    <Row className="animate-fadeIn contact-card  bg-white">
       {/* Contact Information Card with Interactive Icons */}
       <Col md={12} lg={6} sm={12} xs={12} className="mb-4 p-0 my-3">
         <Card 
           className="contact-card shadow-lg" 
           style={{
-            background: "linear-gradient(135deg, #ffffff, #dbeafe)", 
+            background: "linear-gradient(135deg, #e0f7fa, #ffffff)",
             borderRadius: "15px", 
             padding: "1.5rem",
             border: "none",
