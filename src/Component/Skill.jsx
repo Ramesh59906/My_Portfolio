@@ -19,7 +19,13 @@ const Skill = () => {
     <Container className="my-5">
       <Row className="animate-fadeIn">
         <Col>
-          <h3 className='text-center animate-rotateAndColor'>Skills</h3>
+          <h3   style={{
+            fontSize: "2.2rem", 
+            fontWeight: "bold", 
+            color: "#003366", 
+            letterSpacing: "1.5px", 
+            animation: "fadeInDown 1s ease-in-out"
+          }} className='text-center animate-rotateAndColor'>Skills</h3>
           {/* <hr /> */}
         </Col>
       </Row>

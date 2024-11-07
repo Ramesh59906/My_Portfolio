@@ -35,24 +35,100 @@ const Services = () => {
     Aos.init({duration:2000});
   },[]);
   return (
-    <div className="py-5 bg-lightblue">
-      <Container>
-        <h2 className="text-center mb-5 animate-fadeIn animate-rotateAndColor">My Services</h2>
-        <Row className="g-4">
-          {services.map((service, index) => (
-            <Col md={6} sm={6} lg={4} key={index} className="animate-fadeIn">
-              <Card className="h-100 shadow-sm" style={{background: "linear-gradient(to right, #ffffff, rgb(170 241 255))",border:"none"}} data-aos="zoom-in">
-                <Card.Body className="text-center">
-                  <i className={`${service.icon} text-info mb-3`} style={{ fontSize: "3rem" }}></i>
-                  <Card.Title>{service.title}</Card.Title>
-                  <Card.Text style={{fontWeight:"600",fontStyle:"oblique"}}>{service.description}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </div>
+    <div className="py-5" style={{ background: "#f7f9fc" }}>
+    <Container fluid>
+      {/* Section Heading */}
+      <h2 
+        className="text-center mb-5"
+        style={{
+          fontSize: "2.2rem", 
+          fontWeight: "bold", 
+          color: "#003366", 
+          letterSpacing: "1.5px", 
+          animation: "fadeInDown 1s ease-in-out"
+        }}
+      >
+        Our Services
+      </h2>
+  
+      {/* Services Row */}
+      <Row className="g-4">
+        {services.map((service, index) => (
+          <Col 
+            md={6} 
+            sm={6} 
+            lg={4} 
+            key={index} 
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            {/* Service Card */}
+            <Card 
+              className="service-card shadow"
+              style={{
+                background: "linear-gradient(135deg, #e0f7fa, #ffffff)",
+                borderRadius: "20px",
+                transition: "transform 0.3s",
+                cursor: "pointer",
+                overflow: "hidden",
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+              onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+              data-aos="fade-up"
+            >
+              <Card.Body className="text-center p-4" style={{ position: "relative" }}>
+                {/* Floating Icon */}
+                <div 
+                  className="service-icon mb-3" 
+                  style={{
+                    fontSize: "3.5rem",
+                    color: "#007bff",
+                    background: "rgba(0, 123, 255, 0.1)",
+                    borderRadius: "50%",
+                    width: "80px",
+                    height: "80px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0 auto",
+                  }}
+                >
+                  <i className={service.icon}></i>
+                </div>
+  
+                {/* Service Title */}
+                <Card.Title 
+                  style={{
+                    fontWeight: "600",
+                    fontSize: "1.25rem",
+                    color: "#333",
+                    marginTop: "15px",
+                  }}
+                >
+                  {service.title}
+                </Card.Title>
+  
+                {/* Service Description */}
+                <Card.Text 
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "0.95rem",
+                    color: "#666",
+                    marginTop: "10px",
+                    lineHeight: "1.5",
+                    letterSpacing: "0.3px",
+                    padding: "0 15px",
+                  }}
+                >
+                  {service.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  </div>
+  
   );
 };
 

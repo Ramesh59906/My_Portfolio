@@ -37,33 +37,39 @@ const Projects = () => {
         return () => window.removeEventListener('resize', updateHeight);
     }, []);
     return (
-            <Container id="projects" className='my-5'>
-                <Row className="animate-fadeIn">
-                    <Col>
-                        <h3 className='text-center animate-rotateAndColor' >Projects</h3>
-                        {/* <hr /> */}
+        <Container id="projects" className='my-5'>
+            <Row className="animate-fadeIn">
+                <Col>
+                    <h3 style={{
+                        fontSize: "2.2rem",
+                        fontWeight: "bold",
+                        color: "#003366",
+                        letterSpacing: "1.2px",
+                        animation: "fadeInDown 1s ease-in-out"
+                    }} className='text-center animate-rotateAndColor mb-5' >Projects</h3>
+                    {/* <hr /> */}
+                </Col>
+            </Row>
+            <Row>
+                {projectList.map((project, index) => (
+                    <Col md={6} sm={6} lg={4} xs={12} key={index} className="my-1">
+                        <Card className="mb-4 shadow" data-aos="zoom-in" style={{ minHeight, border: "none" }}>
+                            <Card.Img variant="top" src={project.imgSrc} fluid />
+                            {/* <img src={project.imgSrc} className='image-fluid' alt="" /> */}
+                            <Card.Body>
+                                <Card.Title>{project.title}</Card.Title>
+                                <Card.Text style={{ color: "gray" }}>{project.description}</Card.Text>
+                                <Card.Text>
+                                    <a href={project.Url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#007bff" }}>
+                                        Clike here
+                                    </a>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
                     </Col>
-                </Row>
-                <Row>
-                    {projectList.map((project, index) => (
-                        <Col md={6} sm={6} lg={4} xs={12} key={index} className="my-5">
-                            <Card className="mb-4 shadow" data-aos="zoom-in" style={{ minHeight,border:"none" }}>
-                                <Card.Img variant="top" src={project.imgSrc} fluid />
-                                {/* <img src={project.imgSrc} className='image-fluid' alt="" /> */}
-                                <Card.Body>
-                                    <Card.Title>{project.title}</Card.Title>
-                                    <Card.Text style={{ color: "gray" }}>{project.description}</Card.Text>
-                                    <Card.Text>
-                                        <a href={project.Url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#007bff" }}>
-                                            {project.Url}
-                                        </a>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
+                ))}
+            </Row>
+        </Container>
     );
 };
 

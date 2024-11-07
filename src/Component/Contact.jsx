@@ -1,68 +1,4 @@
-// import React, { useEffect } from 'react';
-// import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-// import "../Edit/E.css"
-// import Aos from 'aos';
-// import "aos/dist/aos.css"
 
-
-// const Contact = () => {
-
-  
-//   useEffect(()=>{
-//     Aos.init({duration:2000});
-//   },[]);
-//   return (
-//     <div className="container-fluid">
-//   <Container id="contact" className="my-5">
-//       <h2 className="animate-fadeIn">Contact</h2>
-//       <hr />
-//       <Row className='animate-fadeIn contact-card'>
-//         <Col md={6} className="mb-4">
-//           <Card className="contact-card mt-3" style={{background: "linear-gradient(to right, #ffffff, #b2d1ff)"}} data-aos="fade-up">
-//             <Card.Body>
-//               <Card.Title className="contact-card-title">Get in Touch</Card.Title>
-//               <Card.Text className="contact-card-text">
-//                 <strong>Address:</strong> 5/1/21 Street jose, chennai, Tamil nadu
-//                 <br />
-//                 <strong>Phone:</strong> +91 6369569872
-//                 <br />
-//                 <strong >Email:</strong> rameshn07101@gmail.com
-//               </Card.Text>
-//               <Card.Text className="contact-card-links">
-//                 {/* <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-//                 <br />
-//                 <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">GitHub</a>
-//                 <br />
-//                 <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">Twitter</a> */}
-//                   <i className="bi bi-linkedin px-1"></i>
-//                 <i className="bi bi-instagram px-1"></i>
-//                 <i className="bi bi-whatsapp px-1"></i>
-//                 <i className="bi bi-github px-1"></i>
-//               </Card.Text>
-//             </Card.Body>
-//           </Card>
-//         </Col>
-//         <Col md={6} className="mb-4">
-//           <Form className='mt-3 p-2 border rounded' style={{background: "linear-gradient(to right, #ffffff, #b2d1ff)"}} data-aos="fade-up">
-//             <Form.Group controlId="formBasicEmail">
-//               <Form.Label>Email address</Form.Label>
-//               <Form.Control type="email" placeholder="Enter email" />
-//             </Form.Group>
-//             <Form.Group controlId="formBasicMessage">
-//               <Form.Label>Message</Form.Label>
-//               <Form.Control as="textarea" rows={3} />
-//             </Form.Group>
-//             <Button variant="primary" className='my-2' type="submit">Submit</Button>
-//           </Form>
-//         </Col>
-//       </Row>
-//     </Container>
-//     </div>
-  
-//   );
-// };
-
-// export default Contact;
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import Aos from 'aos';
@@ -107,66 +43,159 @@ const Contact = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <Container id="contact" className="my-5">
-      <Row className="animate-fadeIn">
-        <Col>
-        <h2 className="animate-fadeIn text-center animate-rotateAndColor py-md-4 my-sm-3">Contact</h2>
-        </Col>
-      </Row>
-    
-        <Row className='animate-fadeIn contact-card'>
-          <Col md={6} className="mb-4 my-3">
-            <Card className="contact-card mt-3" style={{ background: "linear-gradient(to right, #ffffff, rgb(170 241 255))" }} data-aos="fade-up">
-              <Card.Body>
-                <Card.Title className="contact-card-title">Get in Touch</Card.Title>
-                <Card.Text className="contact-card-text">
-                  <strong>Address:</strong> 5/1/21 Street jose, chennai, Tamil nadu
-                  <br />
-                  <strong>Phone:</strong> +91 6369569872
-                  <br />
-                  <strong>Email:</strong> rameshn07101@gmail.com
-                </Card.Text>
-                <Card.Text className="contact-card-links">
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className='text-dark'> <i className="bi bi-linkedin px-1"></i></a>
-                <a href="https://www.instagram.com/x_jezz_07/" className='text-dark'><i className="bi bi-instagram px-1"></i></a>
-                <a href="https://web.whatsapp.com/" className='text-dark'><i className="bi bi-whatsapp px-1"></i></a>
-                <a href="https://github.com/Ramesh59906/" className='text-dark'><i className="bi bi-github px-1"></i></a>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={6} className="mb-4">
-            <Form onSubmit={handleSubmit} className='mt-3 p-2 border rounded' style={{ background: "linear-gradient(to right, #ffffff, rgb(170 241 255))" }} data-aos="fade-up">
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                />
-              </Form.Group>
-              <Form.Group controlId="formBasicMessage">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                />
-              </Form.Group>
-              <Button className='my-2 bg-info border shadow' type="submit">Submit</Button>
-            </Form>
-          </Col>
-        </Row>
-        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} closeOnClick pauseOnHover draggable />
-      </Container>
-    </div>
+    // <div className="container-fluid">
+    <Container fluid id="contact" className="my-5">
+    {/* Section Header with Animation */}
+    <Row className="animate-fadeIn">
+      <Col>
+        <h2 
+          className="text-center py-md-4 my-sm-3" 
+          style={{
+            fontSize: "2.2rem", 
+            fontWeight: "bold", 
+            color: "#003366", 
+            letterSpacing: "1.5px", 
+            animation: "fadeInDown 1s ease-in-out"
+          }}
+        >
+          Let’s Connect
+        </h2>
+        {/* <p className="text-center" style={{ color: "#666", fontSize: "1.2rem" }}>
+          I’m here to answer any questions and collaborate on exciting projects.
+        </p> */}
+      </Col>
+    </Row>
+  
+    <Row className="animate-fadeIn contact-card">
+      {/* Contact Information Card with Interactive Icons */}
+      <Col md={12} lg={6} sm={12} xs={12} className="mb-4 p-0 my-3">
+        <Card 
+          className="contact-card shadow-lg" 
+          style={{
+            background: "linear-gradient(135deg, #ffffff, #dbeafe)", 
+            borderRadius: "15px", 
+            padding: "1.5rem",
+            border: "none",
+            boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)"
+          }} 
+          data-aos="fade-up"
+        >
+          <Card.Body>
+            <Card.Title 
+              style={{
+                fontWeight: "700", 
+                fontSize: "1.6rem", 
+                color: "#003366"
+              }}
+            >
+              Get in Touch
+            </Card.Title>
+            <hr style={{ borderColor: "#003366", borderWidth: "2px", width: "50px" }} />
+            <Card.Text style={{ color: "#555", fontSize: "1rem", lineHeight: "2.2" }}>
+              <strong>Address:</strong> 5/1/21 Street Jose, Chennai, Tamil Nadu
+              <br />
+              <strong>Phone:</strong> +91 6369569872
+              <br />
+              <strong>Email:</strong> rameshn07101@gmail.com
+            </Card.Text>
+            <div className="d-flex justify-content-start mt-4">
+              <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" className='me-3' style={{ color: "#0077b5" }}>
+                <i className="bi bi-linkedin" style={{ fontSize: "1.2rem", transition: "0.3s", transform: "scale(1)" }}></i>
+              </a>
+              <a href="https://www.instagram.com/x_jezz_07/" className='me-3' style={{ color: "#c32aa3" }}>
+                <i className="bi bi-instagram" style={{ fontSize: "1.2rem", transition: "0.3s", transform: "scale(1)" }}></i>
+              </a>
+              <a href="https://web.whatsapp.com/" className='me-3' style={{ color: "#25d366" }}>
+                <i className="bi bi-whatsapp" style={{ fontSize: "1.2rem", transition: "0.3s", transform: "scale(1)" }}></i>
+              </a>
+              <a href="https://github.com/Ramesh59906/" style={{ color: "#333" }}>
+                <i className="bi bi-github" style={{ fontSize: "1.2rem", transition: "0.3s", transform: "scale(1)" }}></i>
+              </a>
+            </div>
+          </Card.Body>
+        </Card>
+      </Col>
+  
+      {/* Contact Form with Subtle Animations */}
+      <Col md={12} lg={6} sm={12} xs={12} className="mb-4">
+        <Form 
+          onSubmit={handleSubmit} 
+          className="p-4 shadow-lg" 
+          style={{
+            background: "linear-gradient(135deg, #ffffff, #dbeafe)", 
+            borderRadius: "15px", 
+            boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)"
+          }} 
+          data-aos="fade-up"
+        >
+          <Form.Group controlId="formBasicEmail" className="mb-3">
+            <Form.Label style={{ fontWeight: "600", color: "#003366" }}>Email Address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+              style={{
+                borderRadius: "8px", 
+                boxShadow: "inset 0px 1px 2px rgba(0, 0, 0, 0.1)", 
+                borderColor: "#d1d5db"
+              }}
+            />
+          </Form.Group>
+          
+          <Form.Group controlId="formBasicMessage" className="mb-3">
+            <Form.Label style={{ fontWeight: "600", color: "#003366" }}>Message</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              name="message"
+              placeholder="Type your message here..."
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+              style={{
+                borderRadius: "8px", 
+                boxShadow: "inset 0px 1px 2px rgba(0, 0, 0, 0.1)", 
+                borderColor: "#d1d5db"
+              }}
+            />
+          </Form.Group>
+  
+          <Button 
+            type="submit" 
+            className="w-100 mt-3" 
+            style={{
+              backgroundColor: "#003366", 
+              border: "none", 
+              borderRadius: "8px", 
+              fontWeight: "bold",
+              color: "#fff",
+              padding: "0.75rem",
+              transition: "0.3s ease",
+              boxShadow: "0px 3px 10px rgba(0, 51, 102, 0.3)"
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = "#00509e"}
+            onMouseLeave={(e) => e.target.style.backgroundColor = "#003366"}
+          >
+            Send Message
+          </Button>
+        </Form>
+      </Col>
+    </Row>
+  
+    <ToastContainer 
+      position="top-right" 
+      autoClose={5000} 
+      hideProgressBar={false} 
+      closeOnClick 
+      pauseOnHover 
+      draggable 
+    />
+  </Container>
+  
+    // </div>
   );
 };
 
