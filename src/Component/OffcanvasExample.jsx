@@ -67,8 +67,8 @@ function OffcanvasExample() {
       >
         <Container>
           {/* Navbar Brand with Animation */}
-          <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor fw-bold">
-            P<span className="text-info fs-1">o</span>rtFolio
+          <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor">
+            Pers<span className="text-info fs-1">o</span>nal
           </Navbar.Brand>
 
           {/* Toggle Icon for Small Screens */}
@@ -92,7 +92,7 @@ function OffcanvasExample() {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
                 <Navbar.Brand href="#home" className="fs-2 animate-rotateAndColor fw-bold">
-                  P<span className="text-info fs-1">o</span>rtFolio
+                Pers<span className="text-info fs-1">o</span>nal
                 </Navbar.Brand>
               </Offcanvas.Title>
             </Offcanvas.Header>
@@ -111,36 +111,38 @@ function OffcanvasExample() {
 
             {/* Offcanvas Body with Links */}
             <Offcanvas.Body>
-              <Nav className="justify-content-center flex-grow-1 pe-3">
-                {[
-                  { href: "#home", icon: faHome, label: "Home" },
-                  { href: "#services", icon: faConciergeBell, label: "Services" },
-                  { href: "#about", icon: faUser, label: "About" },
-                  { href: "#project", icon: faProjectDiagram, label: "Project" },
-                  { href: "#skill", icon: faCogs, label: "Skill" },
-                  { href: "#contact", icon: faEnvelope, label: "Contact" }
-                ].map(({ href, icon, label }) => (
-                  <Nav.Link
-                    key={href}
-                    href={href}
-                    className={`px-md-4 px-sm-2 ${activeLink === href ? 'active-link' : ''}`}
-                    style={{
-                      color: activeLink === href ? 'teal' : 'rgb(25 204 240)',
-                      fontWeight: activeLink === href ? 'bold' : 'normal',
-                      transition: 'color 0.3s ease',
-                      padding: '0.6rem 0',
-                    }}
-                    onClick={() => {
-                      handleSetActive(href);
-                      handleClose();
-                    }}
-                  >
-                    <FontAwesomeIcon icon={icon} className="me-2" /> {label}
-                    <hr className='d-md-none' />
-                  </Nav.Link>
-                ))}
-              </Nav>
-            </Offcanvas.Body>
+  <Nav className="justify-content-center flex-grow-1 pe-3">
+    {[
+      { href: "#home", icon: faHome, label: "Home" },
+      { href: "#services", icon: faConciergeBell, label: "Services" },
+      { href: "#about", icon: faUser, label: "About" },
+      { href: "#project", icon: faProjectDiagram, label: "Project" },
+      { href: "#skill", icon: faCogs, label: "Skill" },
+      { href: "#contact", icon: faEnvelope, label: "Contact" }
+    ].map(({ href, icon, label }) => (
+      <Nav.Link
+        key={href}
+        href={href}
+        className={`nav-link px-md-2 mx-md-4 ${activeLink === href ? 'active' : ''}`}
+        style={{
+          fontWeight: activeLink === href ? 'bold' : 'normal',
+          padding: '0.6rem 0',
+        }}
+        onClick={() => {
+          handleSetActive(href);
+          handleClose();
+        }}
+      >
+        <FontAwesomeIcon icon={icon} className="me-2 d-md-none" /> {label}
+        {/* Animated underline element */}
+        <span className="underline"></span>
+        <hr className="d-md-none" />
+      </Nav.Link>
+    ))}
+  </Nav>
+</Offcanvas.Body>
+
+
           </Navbar.Offcanvas>
         </Container>
       </Navbar>

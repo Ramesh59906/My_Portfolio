@@ -37,7 +37,7 @@ const Home = () => {
                   }}
                 />
               </div>
-              <h4 className='animate-fadeIn text-info' style={{ fontWeight: "900", fontSize: "27px" }}>Front-End Developer & Designer...</h4>
+              <h4 className='animate-fadeIn text-info my-1' style={{ fontWeight: "900", fontSize: "27px" }}>Front-End Developer & Designer...</h4>
               <div className='mt-4 animate-rotateWave'>
               <div className="d-flex justify-content-start mb-0">
               <ul className="list-unstyled d-flex gap-3">

@@ -48,7 +48,7 @@ const Services = () => {
           animation: "fadeInDown 1s ease-in-out"
         }}
       >
-        Our Services
+        My Services
       </h2>
   
       {/* Services Row */}

@@ -122,7 +122,7 @@ const Contact = () => {
           onSubmit={handleSubmit} 
           className="p-4 shadow-lg" 
           style={{
-            background: "linear-gradient(135deg, #ffffff, #dbeafe)", 
+            background: "linear-gradient(135deg, #e0f7fa, #ffffff)",
             borderRadius: "15px", 
             boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)"
           }} 
